@@ -11,7 +11,7 @@ const ClubCard = (club) => {
     {
         club?
   <div className="flex justify-center md:justify-end -mt-16">
-    <img className="w-20 h-20 object-cover rounded-full border-2 border-indigo-500" src={club.club.icon} />
+    <img className="w-20 h-20 object-cover rounded-full border-2 border-indigo-500" src={club.club.icon ? club.club.icon  :'https://via.placeholder.com/400'} />
   </div> : null
     }
   <div>
@@ -23,7 +23,7 @@ const ClubCard = (club) => {
   </div>
   <div>
     <a className="text-indigo-600" href={club.club.join_request}>Join</a>
-    <p>@{club.club.id}</p>
+    {/* <p>@{club.club.id}</p> */}
     
   </div>
   <div className="flex justify-end mt-4">
